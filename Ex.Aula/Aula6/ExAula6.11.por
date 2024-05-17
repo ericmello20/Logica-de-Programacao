@@ -5,10 +5,24 @@
 
 programa
 {
-	
+	funcao real calc_total(inteiro min){
+		real total
+		se(min/60.0 > 4.0){
+			total = 10.0	
+		}senao{
+			se (min%60 != 0.0){
+				total = 2.0*(min/60) + 2.0
+			}senao{
+				total = 2.0*(min/60)
+			}
+		}
+		retorne total
+		
+	}
 	funcao inicio()
 	{
-		escreva("Olá Mundo")
+		escreva(calc_total(1))
+		
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -16,7 +30,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 408; 
+ * @POSICAO-CURSOR = 623; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
