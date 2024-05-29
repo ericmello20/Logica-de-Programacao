@@ -58,6 +58,7 @@ programa{
 		para(inteiro i = 0; i < max_linha; i++){
 			se(comparador < matriz_vendas[i][3]){
 				indice = i
+				comparador = matriz_vendas[i][3]
 			}
 		}
 
@@ -107,7 +108,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 2596; 
+ * @POSICAO-CURSOR = 1868; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

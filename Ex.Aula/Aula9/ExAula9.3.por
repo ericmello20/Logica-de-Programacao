@@ -7,7 +7,7 @@ principal é igual à soma dos elementos da diagonal secundária.
 */
 programa
 {
-	const inteiro max = 10
+	const inteiro max = 4
 	
 	funcao preenche_matriz(inteiro &matriz[][]){
 
@@ -78,8 +78,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 297; 
- * @PONTOS-DE-PARADA = ;
+ * @POSICAO-CURSOR = 293; 
+ * @PONTOS-DE-PARADA = 37;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
