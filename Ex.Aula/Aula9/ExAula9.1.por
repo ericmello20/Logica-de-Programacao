@@ -7,20 +7,21 @@ passado por referência.
 */
 programa
 {
-	const inteiro max = 3
+	const inteiro max = 3
 	
-	funcao soma_matriz(inteiro matrizA[][], inteiro matrizB[][], inteiro &matrizC[][]){
+	funcao soma_matriz(inteiro matrizA[][], inteiro matrizB[][], inteiro &matrizC[][]){ // funcao para somar matrizes e retornar uma por parâmetro
 		
 		para(inteiro i = 0; i < max; i++){
 			
 			para(inteiro j = 0; j < max; j++){
 				
-				matrizC[i][j] = matrizA[i][j] + matrizB[i][j]
+				matrizC[i][j] = matrizA[i][j] + matrizB[i][j] // percorre as matrizes somando os elementos nos índices das matrizes base, 
+													 // e atribuindo na matriz de soma.
 			}
 		}
 	}
 
-	funcao preenche_matriz(inteiro &matriz[][]){
+	funcao leia_matriz(inteiro &matriz[][]){
 
 		para(inteiro i = 0; i < max; i++){
 		
@@ -50,10 +51,10 @@ programa
 		inteiro matrizA[max][max], matrizB[max][max], matrizC[max][max]
 		
 		escreva("Preencha a matriz A\n")
-		preenche_matriz(matrizA)
+		leia_matriz(matrizA)
 		
 		escreva("\nPreencha a matriz B\n")
-		preenche_matriz(matrizB)
+		leia_matriz(matrizB)
 		soma_matriz(matrizA, matrizB, matrizC)
 
 		
@@ -66,7 +67,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1124; 
+ * @POSICAO-CURSOR = 1333; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

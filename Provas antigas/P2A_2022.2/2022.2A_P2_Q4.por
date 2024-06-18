@@ -15,9 +15,8 @@ imagem:
  */
 programa
 {
-		
 	
-funcao r(caracter &m[][]){
+	funcao r(caracter &m[][]){
 		para(inteiro i = 0; i < 5; i++){
 			para(inteiro j = 0; j < 6; j++){
 				
@@ -45,35 +44,34 @@ rotina, a matriz deve ser transformada em:
 */
 
 	funcao r2(caracter &m[][], inteiro linha, inteiro coluna){
-		
-		caracter copia[linha][coluna]
-	
-		para(inteiro k = 0; k < 2; k++){
-			para(inteiro i = 0; i < linha; i++){
-				para(inteiro j = 0; j < coluna; j++){
-					se(k==0){
-						copia[i][j] = m[i][j]
-					}senao{
-						m[i][j] = copia[i][coluna-1-j]
-					}
-				}
+		caracter aux
+		para(inteiro i = 0; i < linha; i++){
+			para(inteiro j = 0; j < coluna/2; j++){		
+					aux = m[i][j]
+					m[i][j] = m[i][coluna-1-j]
+					m[i][coluna-1-j] = aux
 			}
 		}
 	}
-	
-	funcao inicio()
-	{
-		caracter m[5][6]
-		
-		r(m)
-		r2(m, 5, 6)
-		
+
+	funcao escreva_matriz(caracter m[][]){
 		para(inteiro i = 0; i < 5; i++){
 			para(inteiro j = 0; j < 6; j++){
 				escreva(m[i][j], " ")
 			}
 			escreva("\n")
-		}		
+		}
+	}
+	funcao inicio()
+	{
+		caracter m[5][6]
+		
+		r(m)
+		escreva_matriz(m)
+		escreva("\n")
+		r2(m, 5, 6)
+		escreva_matriz(m)
+				
 	}
 }
 
@@ -82,7 +80,7 @@ rotina, a matriz deve ser transformada em:
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1113; 
+ * @POSICAO-CURSOR = 1267; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

@@ -11,7 +11,7 @@ programa
 {
 	const inteiro max_linha = 3, max_coluna = 5
 	
-	funcao preenche_matriz(inteiro &matriz[][]){
+	funcao leia_matriz(inteiro &matriz[][]){
 
 		para(inteiro i = 0; i < max_linha; i++){
 		
@@ -65,12 +65,12 @@ programa
 		inteiro matriz[max_linha][max_coluna], soma
 		real media
 		
-		preenche_matriz(matriz)
+		leia_matriz(matriz)
 		soma = soma_matriz(matriz)
 		
 		//c) A média dos elementos da matriz.
 		
-		media = soma_matriz(matriz) / (max_linha * max_coluna * 1.0)
+		media = soma / (max_linha * max_coluna * 1.0)
 		
 		escreva("O maior elemento na matriz é: ", maior_elemento(matriz))
 		escreva("\nA soma dos elementos da matriz é: ", soma)
@@ -82,7 +82,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1502; 
+ * @POSICAO-CURSOR = 1300; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

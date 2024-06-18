@@ -23,41 +23,24 @@ programa
 
 	funcao logico eh_perfeita(inteiro matriz[][]){
 		
-		inteiro principal = 0, secundaria = 0
+		inteiro principal = 0, secundaria = 0, j = max-1
 		
 		// Acumulador para receber a soma da diagonal principal
 		para(inteiro i = 0; i < max; i++){
-			para(inteiro j = 0; j < max; j++){
-				se(j == i){
-					principal += matriz[i][j]
-				}
-			}
+			principal += matriz[i][i]
 		}
-
-		inteiro registrador = max + 1
 		
 		// Acumulador para receber a soma da diagonal secundaria
-		para(inteiro i = 0; i < max; i++){
-			
-			registrador -= 2
-			
-			para(inteiro j = max-1; j >= 0; j--){
-				
-				se (registrador == j-i){
-					
-					secundaria += matriz[i][j]			
-				
-				}
-			}
+		para(inteiro i = 0; i < max; i++){	
+			secundaria += matriz[i][j]
+			j--	//Colocando o J dessa forma e usando apenas uma repetição para I eu garanto que será percorrida apenas a diagonal secundária.
 		}
 
 		// Condição para verdadeiro ou falso
 		se(secundaria == principal){
-			retorne verdadeiro
-		
+			retorne verdadeiro	
 		}senao{
 			retorne falso
-		
 		}
 		
 	}
@@ -78,8 +61,8 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 293; 
- * @PONTOS-DE-PARADA = 37;
+ * @POSICAO-CURSOR = 879; 
+ * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;

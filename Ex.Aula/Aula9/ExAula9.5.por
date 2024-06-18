@@ -8,7 +8,7 @@ programa
 {
 	const inteiro max_linha = 3, max_coluna = 3
 	
-	funcao preenche_matriz(inteiro &matriz[][]){
+	funcao leia_matriz(inteiro &matriz[][]){
 
 		para(inteiro i = 0; i < max_linha; i++){
 		
@@ -22,18 +22,18 @@ programa
 	
 	funcao permuta_valores(inteiro &matriz[][], inteiro x, inteiro y){
 		
-		inteiro vetx[max_coluna]
+		inteiro vetAux[max_coluna] // usando um vetor auxiliar para armazenar os elementos de uma linha da matriz
 		
 		para(inteiro i = 0; i < 2; i++){
 			
 			para(inteiro j = 0; j < max_coluna; j++){
 				
 				se(i == 0){
-					vetx[j] = matriz[x][j]
+					vetAux[j] = matriz[x][j] // armazenando a linha de índice x no vetor auxiliar.
 	
 				}senao{
-					matriz[x][j] = matriz[y][j]
-					matriz[y][j] = vetx[j]
+					matriz[x][j] = matriz[y][j] // substituindo a linha de índice x pela de índice y
+					matriz[y][j] = vetAux[j] // substituindo a linha de índice y pelo vetor anteriormente preenchido pelos elementos da linha x.
 				}
 			}
 		}	
@@ -43,7 +43,7 @@ programa
 	{
 		inteiro matriz[max_linha][max_coluna], x, y
 		
-		preenche_matriz(matriz)
+		leia_matriz(matriz)
 		leia(x)
 		leia(y)
 		
@@ -65,7 +65,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 722; 
+ * @POSICAO-CURSOR = 1010; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

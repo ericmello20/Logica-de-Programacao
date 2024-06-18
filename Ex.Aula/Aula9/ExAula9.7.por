@@ -1,13 +1,15 @@
 /*
+
 7. Faça uma rotina que recebe uma matriz quadrada, um número inteiro c e um vetor de dimensão
 igual ao número de linhas da matriz. A rotina deve substituir a coluna c da matriz pelo vetor dado. 
+
 */
 
 programa
 {
 	const inteiro max = 3
 	
-	funcao preenche_matriz(inteiro &matriz[][]){
+	funcao leia_matriz(inteiro &matriz[][]){
 
 		para(inteiro i = 0; i < max; i++){
 		
@@ -25,7 +27,7 @@ programa
 		}
 	}
 
-	funcao preenche_vetor(inteiro v[]){
+	funcao leia_vetor(inteiro v[]){
 		para(inteiro i = 0; i < max; i++){
 			escreva("Digite o índice ", i, " do vetor: ")
 			leia(v[i])
@@ -35,8 +37,8 @@ programa
 	funcao inicio()
 	{
 		inteiro m[max][max], v[max], c
-		preenche_matriz(m)
-		preenche_vetor(v)
+		leia_matriz(m)
+		leia_vetor(v)
 		leia(c)
 		coluna_vetor(m, c, v)
 
@@ -53,7 +55,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 698; 
+ * @POSICAO-CURSOR = 791; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

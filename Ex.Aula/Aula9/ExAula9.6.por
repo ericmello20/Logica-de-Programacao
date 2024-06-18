@@ -5,18 +5,16 @@ programa
 {
 	const inteiro max = 3
 	
-	funcao preenche_matriz(inteiro &matriz[][]){
+	funcao leia_matriz(inteiro &matriz[][]){
 
 		para(inteiro i = 0; i < max; i++){
-		
 			para(inteiro j = 0; j < max; j++){
-
 				escreva("linha: ", i, "\ncoluna : ", j, "\n")
 				leia(matriz[i][j])
 			}
 		}
 	}
-	funcao transposta(inteiro m[][], inteiro &mt[][]){
+	funcao transposta(inteiro m[][], inteiro &mt[][]){
 		para(inteiro i = 0; i < max; i++){
 			para(inteiro j = 0; j < max; j++){
 				mt[j][i] = m[i][j]
@@ -27,7 +25,7 @@ programa
 	{
 		inteiro m[max][max], mt[max][max]
 
-		preenche_matriz(m)
+		leia_matriz(m)
 		transposta(m, mt)
 
 		para(inteiro i = 0; i < max; i++){
@@ -43,7 +41,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 717; 
+ * @POSICAO-CURSOR = 202; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
